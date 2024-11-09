@@ -87,24 +87,44 @@ botao.soma.addEventListener('click', ()=>alert('Estou funfando também'))
 const botao = {
     alertar: document.querySelector('#botaoAlerta'),
     soma: document.querySelector('#soma'),
-    alterarCor: document.querySelector('#alterarCor')
+    alterarCor: document.querySelector('#alterarCor'),
+    umClick: document.querySelector('#umClick'),
+    doisClick: document.querySelector('#doisClick'),
 
 }
 
 const estrutura = {
     body: document.querySelector('body'),
+    divArea: document.querySelector('#area'),
+   
+}
+
+const img = {
+    gatoSome: document.querySelector('#gato'),
+    gatoAparece: document.querySelector('#gato')
+}
+
+const audio = {
+    gatoMia: new Audio("./media/audio/miAu.mp3")
 }
 
 var form = {
-    inputCor: document.querySelector('#cor'),
+    inputCor: document.querySelector('#cor')
 }
 
-function alterarCor(){
+botao.umClick.addEventListener('click', ()=> img.gatoSome.classList.toggle('fechado'));
 
-    estrutura.body.style.backgroundColor = form.inputCor.value
+// botao.doisClick.addEventListener('dblclick', ()=>img.gatoSome.style.display = 'block')
 
-}
 
-botao.alterarCor.addEventListener('click', alterarCor)
+// Eventos
+
+// function alterarCor(){
+
+//     estrutura.body.style.backgroundColor = form.inputCor.value
+
+// }
+
+// botao.alterarCor.addEventListener('click', alterarCor)
 
 // botao.alterarCor.addEventListener('click', ()=> estrutura.body.style.backgroundColor = form.inputCor)
